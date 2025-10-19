@@ -655,6 +655,43 @@ section {
   -webkit-transform: scale(1);
           transform: scale(1);
 }
+.pub-list a {
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.pub-list a:hover {
+    border-bottom: 1px solid var(--color-secondary); /* matches your theme accent */
+    color: var(--color-secondary);
+}
+/* DOI link styling */
+.doi-link {
+  color: var(--color-secondary);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.doi-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background-color: var(--color-secondary);
+  transition: width 0.3s ease;
+}
+
+.doi-link:hover {
+  color: var(--color-white); /* slight contrast pop */
+}
+
+.doi-link:hover::after {
+  width: 100%;
+}
 
 .blogs {
   display: -ms-grid;
